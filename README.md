@@ -1,9 +1,9 @@
 <h1 align="center">
 
   <p align="center">
-    <a href="https://www.npmjs.com/package/react-native-app-tour"><img src="http://img.shields.io/npm/v/react-native-app-tour.svg?style=flat" /></a>
-    <a href="https://github.com/prscX/react-native-app-tour/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
-    <a href="https://github.com/prscX/react-native-app-tour#License"><img src="https://img.shields.io/npm/l/react-native-app-tour.svg?style=flat" /></a>
+    <a href="https://www.npmjs.com/package/imokhles-react-native-app-tour"><img src="http://img.shields.io/npm/v/imokhles-react-native-app-tour.svg?style=flat" /></a>
+    <a href="https://github.com/imokhles/react-native-app-tour/pulls"><img alt="PRs Welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" /></a>
+    <a href="https://github.com/imokhles/react-native-app-tour#License"><img src="https://img.shields.io/npm/l/imokhles-react-native-app-tour.svg?style=flat" /></a>
   </p>
 
     ReactNative: Native App Tour Library (Android/iOS)
@@ -99,7 +99,6 @@ allprojects {
     - FIX: remove react-native-app-tour from package.json and rerun
   - Pods version is out of date.
     - `pod repo update`
-- If you encounter `File not found in iOS` issue while setup, please refer [ISSUE - 3](https://github.com/prscX/react-native-app-tour/issues/3) issue which might help you in order to resolve.
 - If you have problems with `Android` Trying to resolve view with tag which doesn't exist or can't resolve tag. Please add props `collapasable: false` to your View
 
 ## 🎨 API's
@@ -182,14 +181,9 @@ AppTour.ShowSequence(appTourSequence)
 
 ## 🔧 Breaking Changes
 
-- [V0.0.4](https://github.com/prscX/react-native-app-tour/releases/tag/v0.0.4)
+- [V1.0](https://github.com/imokhles/react-native-app-tour/releases/tag/v1.0)
 
-  - Generalized props across platforms @congnguyen91
-  - Migrated License to Apache 2.0
-
-- [V0.0.10](https://github.com/prscX/react-native-app-tour/releases/tag/v0.0.10)
-  - Added `order` as a mandatory property to each target
-  - Each component which is to be rendered in the tour should have a `key` prop. It is mandatory.
+  - make material-showcase-ios non required ( install manually ) by following [Objective-C description](https://github.com/Husseinhj/material-showcase-ios/blob/master/docs-standalone/Objective-C.md)
 
 ## ✨ Credits
 
@@ -198,7 +192,7 @@ AppTour.ShowSequence(appTourSequence)
 
 ## 🤔 How to contribute
 
-Have an idea? Found a bug? Please raise to [ISSUES](https://github.com/prscX/react-native-app-tour/issues).
+Have an idea? Found a bug? Please raise to [ISSUES](https://github.com/imokhles/react-native-app-tour/issues).
 Contributions are welcome and are greatly appreciated! Every little bit helps, and credit will always be given.
 
 ## 💫 Where is this library used?
@@ -207,8 +201,9 @@ If you are using this library in one of your projects, add it in this list below
 
 ## 📜 License
 
-This library is provided under the Apache 2 License.
+This library is provided under the MIT License.
 
+## Original Source By
 RNAppTour @ [prscX](https://github.com/prscX)
 
 ## 💖 Support my projects
@@ -218,9 +213,7 @@ I open-source almost everything I can, and I try to reply everyone needing help 
 However, if you get some profit from this or just want to encourage me to continue creating stuff, there are few ways you can do it:
 
 - Starring and sharing the projects you like 🚀
-- If you're feeling especially charitable, please follow [prscX](https://github.com/prscX) on GitHub.
-
-  <a href="https://www.buymeacoffee.com/prscX" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
+- If you're feeling especially charitable, please follow [imokhles](https://github.com/imokhles) on GitHub.
 
   Thanks! ❤️
   <br/>
