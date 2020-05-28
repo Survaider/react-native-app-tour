@@ -1,9 +1,23 @@
 #import "RNAppTour.h"
 #import <React/RCTEventDispatcher.h>
+#if __has_include(<PushyRN/PushyRN-Swift.h>)
+#import <RNAppTour/RNAppTour-Swift.h>
+#else
+#import "RNAppTour-Swift.h"
+#endif
+
 
 NSString *const onStartShowStepEvent = @"onStartShowCaseEvent";
 NSString *const onShowSequenceStepEvent = @"onShowSequenceStepEvent";
 NSString *const onFinishShowStepEvent = @"onFinishSequenceEvent";
+
+@interface RNAppTour () <RCTBridgeModule, MaterialShowcaseDelegate> {
+    MutableOrderedDictionary *targets;
+}
+
+@property (nonatomic, weak) id <MaterialShowcaseDelegate> delegate;
+
+@end
 
 @implementation MutableOrderedDictionary {
 @protected
@@ -98,7 +112,7 @@ RCT_EXPORT_METHOD(ShowSequence:(NSArray *)views props:(NSDictionary *)props)
 
     if (tourStarted == true) return;
     if ([[targets allKeys] count] <= 0) return;
-    
+
     NSString *showTargetKey = [ [targets allKeys] objectAtIndex: 0];
     [self ShowFor:[NSNumber numberWithLongLong:[showTargetKey longLongValue]] props:[targets objectForKey:showTargetKey] ];
 }
@@ -254,30 +268,30 @@ RCT_EXPORT_METHOD(ShowFor:(nonnull NSNumber *)view props:(NSDictionary *)props)
 }
 - (void)showCaseDidDismissWithShowcase:(MaterialShowcase *)materialShowcase didTapTarget:(bool)didTapTarget {
     NSLog(@"");
-    
+
     NSArray *targetKeys = [targets allKeys];
     if (targetKeys.count <= 0) {
         return;
     }
-    
+
     NSString *removeTargetKey = [targetKeys objectAtIndex: 0];
     [targets removeObjectForKey: removeTargetKey];
-    
+
     NSMutableArray *viewIds = [[NSMutableArray alloc] init];
     NSMutableDictionary *props = [[NSMutableDictionary alloc] init];
-    
+
     if (targetKeys.count <= 1) {
         [self.bridge.eventDispatcher sendDeviceEventWithName:onFinishShowStepEvent body:@{@"finish": @YES}];
     }
     else {
         [self.bridge.eventDispatcher sendDeviceEventWithName:onShowSequenceStepEvent body:@{@"next_step": @YES}];
     }
-    
+
     for (NSString *view in [targets allKeys]) {
         [viewIds addObject: [NSNumber numberWithLongLong:[view longLongValue]]];
         [props setObject:(NSDictionary *)[targets objectForKey: view] forKey:view];
     }
-    
+
     if ([viewIds count] > 0) {
         [self ShowSequence:viewIds props:props];
     }
@@ -288,7 +302,7 @@ RCT_EXPORT_METHOD(ShowFor:(nonnull NSNumber *)view props:(NSDictionary *)props)
     if (strAlignment == nil) {
         return NSTextAlignmentLeft; // default is left
     }
-    
+
     NSString *lowCaseString = [strAlignment lowercaseString];
     if ([lowCaseString isEqualToString:@"left"]) {
         return NSTextAlignmentLeft;
@@ -299,7 +313,7 @@ RCT_EXPORT_METHOD(ShowFor:(nonnull NSNumber *)view props:(NSDictionary *)props)
     } if ([lowCaseString isEqualToString:@"justify"]) {
         return NSTextAlignmentJustified;
     }
-    
+
     return NSTextAlignmentLeft;
 }
 

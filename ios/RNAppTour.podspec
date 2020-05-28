@@ -17,5 +17,8 @@ Pod::Spec.new do |s|
 
   s.preserve_paths         = 'LICENSE', 'package.json'
   s.source_files           = '**/*.{h,m}', '**/MaterialShowcase/*.swift'
+  s.requires_arc    = true
+  s.swift_version   = '4.2'
+
   s.dependency             'React'
 end
