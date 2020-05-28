@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1D0EFF470670DA6DA8867E46 /* Pods_RNAppTour.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D1CEA180732A9A8BF0371676 /* Pods_RNAppTour.framework */; };
+		88A813202480752700EC60A7 /* MaterialShowcaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A8131B2480752700EC60A7 /* MaterialShowcaseController.swift */; };
+		88A813212480752700EC60A7 /* MaterialShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A8131C2480752700EC60A7 /* MaterialShowcase.swift */; };
+		88A813222480752700EC60A7 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A8131D2480752700EC60A7 /* Utility.swift */; };
+		88A813232480752700EC60A7 /* MaterialShowcaseInstructionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A8131E2480752700EC60A7 /* MaterialShowcaseInstructionView.swift */; };
+		88A813272480763400EC60A7 /* MaterialShowcase+Calculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88A813262480763400EC60A7 /* MaterialShowcase+Calculations.swift */; };
 		B3E7B58A1CC2AC0600A0062D /* RNAppTour.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* RNAppTour.m */; };
 		CE22189C2080D66700481F9A /* MaterialShowcase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2218992080D65E00481F9A /* MaterialShowcase.framework */; };
 /* End PBXBuildFile section */
@@ -44,6 +49,11 @@
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNAppTour.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNAppTour.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		13DE74E553ECFF3435B654D7 /* Pods-RNAppTour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNAppTour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RNAppTour/Pods-RNAppTour.debug.xcconfig"; sourceTree = "<group>"; };
+		88A8131B2480752700EC60A7 /* MaterialShowcaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialShowcaseController.swift; sourceTree = "<group>"; };
+		88A8131C2480752700EC60A7 /* MaterialShowcase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialShowcase.swift; sourceTree = "<group>"; };
+		88A8131D2480752700EC60A7 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		88A8131E2480752700EC60A7 /* MaterialShowcaseInstructionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialShowcaseInstructionView.swift; sourceTree = "<group>"; };
+		88A813262480763400EC60A7 /* MaterialShowcase+Calculations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MaterialShowcase+Calculations.swift"; sourceTree = "<group>"; };
 		B3E7B5881CC2AC0600A0062D /* RNAppTour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNAppTour.h; sourceTree = "<group>"; };
 		B3E7B5891CC2AC0600A0062D /* RNAppTour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNAppTour.m; sourceTree = "<group>"; };
 		CE2218932080D65E00481F9A /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
@@ -84,12 +94,25 @@
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
+				88A813192480752700EC60A7 /* MaterialShowcase */,
 				B3E7B5881CC2AC0600A0062D /* RNAppTour.h */,
 				B3E7B5891CC2AC0600A0062D /* RNAppTour.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
 				C6B153389FE5C589B9190528 /* Frameworks */,
 				415DFCB0D0E0A4B371341FA3 /* Pods */,
 			);
+			sourceTree = "<group>";
+		};
+		88A813192480752700EC60A7 /* MaterialShowcase */ = {
+			isa = PBXGroup;
+			children = (
+				88A813262480763400EC60A7 /* MaterialShowcase+Calculations.swift */,
+				88A8131B2480752700EC60A7 /* MaterialShowcaseController.swift */,
+				88A8131C2480752700EC60A7 /* MaterialShowcase.swift */,
+				88A8131D2480752700EC60A7 /* Utility.swift */,
+				88A8131E2480752700EC60A7 /* MaterialShowcaseInstructionView.swift */,
+			);
+			path = MaterialShowcase;
 			sourceTree = "<group>";
 		};
 		C6B153389FE5C589B9190528 /* Frameworks */ = {
@@ -150,6 +173,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -211,7 +235,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88A813222480752700EC60A7 /* Utility.swift in Sources */,
 				B3E7B58A1CC2AC0600A0062D /* RNAppTour.m in Sources */,
+				88A813212480752700EC60A7 /* MaterialShowcase.swift in Sources */,
+				88A813202480752700EC60A7 /* MaterialShowcaseController.swift in Sources */,
+				88A813232480752700EC60A7 /* MaterialShowcaseInstructionView.swift in Sources */,
+				88A813272480763400EC60A7 /* MaterialShowcase+Calculations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +267,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEFINES_MODULE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -282,6 +312,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
+				DEFINES_MODULE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
