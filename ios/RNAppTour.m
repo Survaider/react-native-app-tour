@@ -1,6 +1,6 @@
 #import "RNAppTour.h"
 #import <React/RCTEventDispatcher.h>
-#if __has_include(<PushyRN/PushyRN-Swift.h>)
+#if __has_include(<RNAppTour/RNAppTour-Swift.h>)
 #import <RNAppTour/RNAppTour-Swift.h>
 #else
 #import "RNAppTour-Swift.h"
