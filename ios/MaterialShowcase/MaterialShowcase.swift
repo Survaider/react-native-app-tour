@@ -295,9 +295,9 @@ extension MaterialShowcase {
       let center = targetRippleView.center//getOuterCircleCenterPoint(for: targetCopyView)
       
       if UIDevice.current.userInterfaceIdiom == .pad {
-        radius = 300.0
+        radius = 500.0
       } else {
-        radius = getOuterCircleRadius(center: center, textBounds: instructionView.frame, targetBounds: targetRippleView.frame)
+        radius = getOuterCircleRadius(center: center, textBounds: instructionView.frame, targetBounds: targetRippleView.frame) + 100
       }
       
       backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: radius * 2,height: radius * 2))

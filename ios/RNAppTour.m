@@ -39,7 +39,7 @@ NSString *const onFinishShowStepEvent = @"onFinishSequenceEvent";
 
 + (BOOL)requiresMainQueueSetup
 {
-  return YES;
+  return NO;
 }
 
 - (NSEnumerator *)keyEnumerator {
